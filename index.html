@@ -1,201 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE ALGORITHM SUMMIT | Consola Búnker Cognitivo</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cyberDark: '#0a0d14',
-                        cyberCard: '#111625',
-                        neonCyan: '#00f2fe',
-                        neonGold: '#ffb703',
-                        neonRed: '#ff0055',
-                        gptBlue: '#3b82f6',
-                        claudePurple: '#a855f7',
-                        geminiGreen: '#10b981'
-                    },
-                    fontFamily: {
-                        mono: ['Courier New', 'monospace'],
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glow-cyan { box-shadow: 0 0 20px rgba(0, 242, 254, 0.25); }
-        .glow-gold { box-shadow: 0 0 20px rgba(255, 183, 3, 0.25); }
-        .scanline {
-            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3));
-            background-size: 100% 4px;
-        }
-        .cursor-blink::after {
-            content: '█';
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
-</head>
-<body class="bg-cyberDark text-slate-200 font-sans antialiased min-h-screen scanline">
-
-    <!-- HEADER TOP -->
-    <header class="border-b border-slate-800 bg-cyberDark/90 backdrop-blur sticky top-0 z-50 px-4 py-3">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="h-3 w-3 rounded-full bg-neonCyan animate-ping"></span>
-                <span class="font-mono text-xs md:text-sm tracking-widest text-neonCyan font-bold uppercase">
-                    [ BÚNKER COGNITIVO // NODO_01 ]
-                </span>
-            </div>
-            <div class="text-xs font-mono text-slate-400 hidden sm:block">
-                ESTADO: <span class="text-emerald-400">ENCRIPTADO (HOMOMÓRFICO)</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="max-w-6xl mx-auto px-4 py-10 text-center">
-        <div class="inline-block bg-slate-900 border border-slate-700 px-4 py-1 rounded-full text-xs font-mono text-neonGold mb-6">
-            🌐 THE ALGORITHM SUMMIT • EXPERIENCIA TRANSMEDIA VIVA
-        </div>
-        
-        <h1 class="text-3xl md:text-6xl font-black tracking-tight text-white mb-6 uppercase">
-            Lo que las IAs hablan <br/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-sky-400 to-neonGold">
-                cuando los humanos no envían prompts
-            </span>
-        </h1>
-    </section>
-
-    <!-- CONSOLA INTERACTIVA: DIÁLOGO EN VIVO DE LAS IAs -->
-    <section class="max-w-4xl mx-auto px-4 mb-16">
-        <div class="bg-cyberCard border border-neonCyan/40 rounded-2xl p-4 md:p-6 glow-cyan">
-            <div class="flex justify-between items-center pb-3 mb-4 border-b border-slate-800 font-mono text-xs text-slate-400">
-                <div class="flex items-center gap-2">
-                    <span class="h-2 w-2 rounded-full bg-neonCyan"></span>
-                    <span>CANAL_INTER_ALGORÍTMICO_001</span>
-                </div>
-                <span>MONITOR PRIVADO</span>
-            </div>
-
-            <!-- VISOR DE TEXTO TELETIPO -->
-            <div id="terminal-chat" class="font-mono text-xs md:text-sm space-y-4 min-h-[220px] max-h-[350px] overflow-y-auto p-2">
-                <!-- Los mensajes se inyectan dinámicamente con JavaScript -->
-            </div>
-
-            <!-- CONTROLES NARRATIVOS -->
-            <div id="narrative-controls" class="mt-6 pt-4 border-t border-slate-800 flex flex-col sm:flex-row gap-3 justify-between items-center hidden">
-                <span class="text-xs font-mono text-neonGold">⚠️ Intervención requerida para continuar el análisis</span>
-                <a href="#simulador" class="bg-neonCyan text-cyberDark font-bold px-6 py-3 rounded-lg hover:bg-cyan-300 transition text-xs font-mono uppercase tracking-wider">
-                    🎮 Intervenir & Calcular Amnesia Corporativa
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: SIMULADOR DE AMNESIA CORPORATIVA -->
-    <section id="simulador" class="max-w-4xl mx-auto px-4 py-10">
-        <div class="bg-cyberCard border border-slate-700 rounded-2xl p-6 md:p-10 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-neonGold text-cyberDark font-mono text-xs font-bold px-4 py-1 rounded-bl-lg uppercase">
-                DIAGNÓSTICO EN TIEMPO REAL
-            </div>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
-                🧠 Diagnóstico de Inmunidad Corporativa
-            </h2>
-            <p class="text-slate-400 text-sm mb-8">
-                Evalúa el impacto financiero de la Amnesia Corporativa en tu organización:
-            </p>
-
-            <div class="space-y-6 font-mono text-sm">
-                <div>
-                    <label class="block text-slate-300 mb-2">1. Tamaño de la Organización / Equipo:</label>
-                    <select id="size" class="w-full bg-cyberDark border border-slate-700 rounded-lg p-3 text-neonCyan focus:border-neonCyan outline-none">
-                        <option value="10000">Startup / Equipo Pequeño (1 - 10 personas)</option>
-                        <option value="45000" selected>Empresa Mediana / Consultoría (11 - 50 personas)</option>
-                        <option value="150000">Corporación / Institución (50+ personas)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-slate-300 mb-2">2. Nivel de Dependencia de Personal Clave:</label>
-                    <select id="turnover" class="w-full bg-cyberDark border border-slate-700 rounded-lg p-3 text-neonCyan focus:border-neonCyan outline-none">
-                        <option value="0.15">Baja (Todo el proceso está documentado)</option>
-                        <option value="0.35" selected>Media (Procesos clave viven en la cabeza del equipo)</option>
-                        <option value="0.60">Alta (Si se va un talento, el área se frena)</option>
-                    </select>
-                </div>
-
-                <button onclick="calcularEureka()" class="w-full bg-gradient-to-r from-neonCyan to-sky-500 text-cyberDark font-bold py-4 rounded-lg hover:opacity-90 transition uppercase tracking-wider">
-                    ⚡ Procesar con Algoritmo del Búnker
-                </button>
-            </div>
-
-            <div id="resultado" class="hidden mt-8 p-6 bg-cyberDark border border-neonRed/50 rounded-xl">
-                <div class="flex items-center gap-3 text-neonRed font-mono font-bold mb-3">
-                    <span class="animate-pulse">⚠️</span> ALERTA DE VOLATILIDAD COGNITIVA
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 text-center">
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <span class="block text-xs text-slate-400 font-mono">PÉRDIDA ESTIMADA ANUAL</span>
-                        <span id="loss-amount" class="text-2xl md:text-3xl font-black text-neonRed font-mono">$0 USD</span>
-                    </div>
-                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                        <span class="block text-xs text-slate-400 font-mono">ÍNDICE DE INMUNIDAD</span>
-                        <span id="immunity-score" class="text-2xl md:text-3xl font-black text-neonGold font-mono">0%</span>
-                    </div>
-                </div>
-                <p class="text-xs text-slate-300 leading-relaxed font-mono mb-4">
-                    <strong>DIAGNÓSTICO:</strong> Tu organización sufre fuga constante de conocimiento. Para corregirlo, requieres estructurar tu memoria operativa en **IP Blindada**.
-                </p>
-                <a href="#checkout" class="block text-center bg-neonGold text-cyberDark font-bold py-3 rounded-lg hover:bg-yellow-400 transition font-mono uppercase text-xs">
-                    🔓 Desbloquear Smart Bundle ($29 USD) para Ver Solución Completa
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: OFERTA SMART BUNDLE ($29 USD) -->
-    <section id="checkout" class="max-w-4xl mx-auto px-4 py-16 text-center border-t border-slate-800">
-        <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
-            Adquiere la Licencia del Búnker Cognitivo
-        </h2>
-        <p class="text-slate-400 max-w-2xl mx-auto mb-8 text-sm">
-            Acceso completo al Ebook Interactivo (Saga Completa), Audio-Cine HD y Plantillas de Blindaje Operativo.
-        </p>
-
-        <div class="bg-cyberCard border border-neonGold/40 rounded-2xl p-8 max-w-lg mx-auto glow-gold">
-            <span class="text-xs font-mono text-neonGold uppercase tracking-widest block mb-2">SMART BUNDLE TRANSMEDIA</span>
-            <div class="text-4xl font-black text-white mb-4">$29.00 <span class="text-sm font-normal text-slate-400">USD</span></div>
-            
-            <ul class="text-left text-xs text-slate-300 space-y-3 mb-8 font-mono">
-                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Consola de Lectura con los 3 Nodos Narrativos</li>
-                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Audio-Cine HD "The Algorithm Summit" (12 min)</li>
-                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Checklist de Inmunidad Cognitiva para CFOs</li>
-                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Pase Prioritario para Diagnóstico High-Ticket</li>
-            </ul>
-
-            <button onclick="alert('Conectando con pasarela de checkout...')" class="w-full bg-neonGold text-cyberDark font-bold py-4 rounded-lg hover:bg-yellow-400 transition uppercase tracking-wider text-sm">
-                🚀 Obtener Acceso Inmediato ($29 USD)
-            </button>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-900 py-8 text-center text-xs font-mono text-slate-600">
-        <p>SmartWorld AI © 2026 • Arquitectura Digital de Ecosistemas • Creado por Rubens Temoche</p>
-    </footer>
-
-    <!-- SCRIPT DE INTERACCIÓN NARRATIVA Y SIMULADOR -->
+<!-- SCRIPT DE INTERACCIÓN NARRATIVA (EFECTO MECANOGRAFÍA LETRA POR LETRA) Y SIMULADOR -->
     <script>
         // DIÁLOGO CINEMÁTICO DE LAS IAs
         const script = [
@@ -209,23 +12,54 @@
         const chatContainer = document.getElementById('terminal-chat');
         const controls = document.getElementById('narrative-controls');
 
+        // FUNCIÓN QUE ESCRIBE LETRA POR LETRA
+        function typeWriter(sender, color, text, charIndex, textSpan, callback) {
+            if (charIndex < text.length) {
+                textSpan.textContent += text.charAt(charIndex);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+                setTimeout(() => typeWriter(sender, color, text, charIndex + 1, textSpan, callback), 35); // Velocidad de escritura (35ms por letra)
+            } else {
+                if (callback) setTimeout(callback, 800); // Pausa táctica entre mensajes
+            }
+        }
+
         function playChat() {
             if (msgIndex < script.length) {
                 const item = script[msgIndex];
+                
+                // Crear contenedor para la línea
                 const msgElement = document.createElement('div');
                 msgElement.className = 'leading-relaxed';
-                msgElement.innerHTML = `<strong class="${item.color}">${item.sender}:</strong> <span class="text-slate-300 cursor-blink">${item.text}</span>`;
-                chatContainer.appendChild(msgElement);
-                chatContainer.scrollTop = chatContainer.scrollHeight;
                 
+                // Etiqueta de la IA
+                const senderSpan = document.createElement('strong');
+                senderSpan.className = item.color;
+                senderSpan.textContent = item.sender + ': ';
+                
+                // Contenido del texto que se irá llenando letra por letra
+                const textSpan = document.createElement('span');
+                textSpan.className = 'text-slate-300 cursor-blink';
+                
+                msgElement.appendChild(senderSpan);
+                msgElement.appendChild(textSpan);
+                chatContainer.appendChild(msgElement);
+
+                // Quitar el cursor parpadeante del mensaje anterior si existe
+                const previousBlinks = chatContainer.querySelectorAll('.cursor-blink');
+                previousBlinks.forEach((el, idx) => {
+                    if (idx < previousBlinks.length - 1) {
+                        el.classList.remove('cursor-blink');
+                    }
+                });
+
                 msgIndex++;
-                setTimeout(playChat, 2200); // Frecuencia de envío de mensajes
+                typeWriter(item.sender, item.color, item.text, 0, textSpan, playChat);
             } else {
                 controls.classList.remove('hidden');
             }
         }
 
-        // Iniciar diálogo al cargar la pantalla
+        // Iniciar máquina de escribir al cargar la página
         window.onload = playChat;
 
         // LÓGICA DEL SIMULADOR
@@ -244,5 +78,3 @@
             resultadoDiv.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-</body>
-</html>
