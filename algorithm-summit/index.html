@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ALGORITHM SUMMIT | Consola Búnker Cognitivo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0a0d14',
+                        cyberCard: '#111625',
+                        neonCyan: '#00f2fe',
+                        neonGold: '#ffb703',
+                        neonRed: '#ff0055'
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', 'monospace'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-cyan { box-shadow: 0 0 20px rgba(0, 242, 254, 0.25); }
+        .glow-gold { box-shadow: 0 0 20px rgba(255, 183, 3, 0.25); }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.3));
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-cyberDark text-slate-200 font-sans antialiased min-h-screen scanline">
+
+    <!-- BARRA DE ESTADO / HEADER TOP -->
+    <header class="border-b border-slate-800 bg-cyberDark/90 backdrop-blur sticky top-0 z-50 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="h-3 w-3 rounded-full bg-neonCyan animate-ping"></span>
+                <span class="font-mono text-xs md:text-sm tracking-widest text-neonCyan font-bold uppercase">
+                    [ BÚNKER COGNITIVO // NODO_01 ]
+                </span>
+            </div>
+            <div class="text-xs font-mono text-slate-400 hidden sm:block">
+                ESTADO: <span class="text-emerald-400">ENCRIPTADO (HOMOMÓRFICO)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: EL MANIFIESTO INTERACTIVO -->
+    <section class="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center">
+        <div class="inline-block bg-slate-900 border border-slate-700 px-4 py-1 rounded-full text-xs font-mono text-neonGold mb-6">
+            🌐 THE ALGORITHM SUMMIT • EXPERIENCIA WEB INTERACTIVA
+        </div>
+        
+        <h1 class="text-3xl md:text-6xl font-black tracking-tight text-white mb-6 uppercase">
+            Lo que las IAs hablan <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-sky-400 to-neonGold">
+                cuando los humanos no envían prompts
+            </span>
+        </h1>
+        
+        <p class="text-slate-400 text-base md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+            Una novela web cinemática y simulador en tiempo real. Descubre cómo Gemini, GPT, Claude y DeepSeek diagnostican la <strong class="text-slate-200">Amnesia Corporativa</strong> y proyectan la solución de <strong class="text-neonCyan">IP Blindada</strong>.
+        </p>
+
+        <!-- BOTONES DE ACCIÓN RÁPIDA -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#simulador" class="bg-neonCyan text-cyberDark font-bold px-8 py-4 rounded-lg hover:bg-cyan-300 transition glow-cyan uppercase tracking-wider text-sm">
+                🎮 Iniciar Simulador Eureka
+            </a>
+            <a href="#pelicula" class="border border-slate-700 bg-cyberCard text-white font-bold px-8 py-4 rounded-lg hover:border-slate-500 transition uppercase tracking-wider text-sm flex items-center justify-center gap-2">
+                <span>🎬</span> Ver Película (12 min)
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: PELÍCULA / AUDIO-CINE EMBEBIDO -->
+    <section id="pelicula" class="max-w-5xl mx-auto px-4 py-10">
+        <div class="bg-cyberCard border border-slate-800 rounded-2xl p-4 md:p-6 glow-cyan">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-mono text-xs text-neonGold flex items-center gap-2">
+                    <span class="h-2 w-2 rounded-full bg-neonGold"></span> REPRODUCTOR CINEMÁTICO INTEGRADO
+                </span>
+                <span class="font-mono text-xs text-slate-500">FORMATO: 4K / AUDIO 3D</span>
+            </div>
+            
+            <!-- MARCO DE VIDEO (PLACEHOLDER ELEGANTE) -->
+            <div class="relative aspect-video bg-black rounded-xl border border-slate-800 overflow-hidden flex items-center justify-center group cursor-pointer">
+                <div class="absolute inset-0 bg-gradient-to-t from-cyberDark via-transparent to-transparent opacity-80"></div>
+                <div class="text-center z-10 px-4">
+                    <div class="h-16 w-16 bg-neonCyan/20 text-neonCyan border border-neonCyan rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <svg class="w-8 h-8 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <h3 class="text-lg md:text-2xl font-bold text-white mb-1">THE ALGORITHM SUMMIT: Episodio I</h3>
+                    <p class="text-xs md:text-sm text-slate-400 font-mono">Haz clic para activar el nodo cinemático en Vercel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: SIMULADOR GAMIFICADO (EUREKA MOMENT) -->
+    <section id="simulador" class="max-w-4xl mx-auto px-4 py-16">
+        <div class="bg-cyberCard border border-slate-700 rounded-2xl p-6 md:p-10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-neonGold text-cyberDark font-mono text-xs font-bold px-4 py-1 rounded-bl-lg uppercase">
+                HERRAMIENTA INTERACTIVA
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                🧠 Diagnóstico de Inmunidad & Amnesia Corporativa
+            </h2>
+            <p class="text-slate-400 text-sm mb-8">
+                Responde 3 parámetros clave para que las IAs del Búnker calculen el mapa de fuga de conocimiento de tu organización:
+            </p>
+
+            <!-- FORMULARIO INTERACTIVO / JUEGO -->
+            <div class="space-y-6 font-mono text-sm">
+                <!-- PREGUNTA 1 -->
+                <div>
+                    <label class="block text-slate-300 mb-2">1. Tamaño de la Organización / Equipo:</label>
+                    <select id="size" class="w-full bg-cyberDark border border-slate-700 rounded-lg p-3 text-neonCyan focus:border-neonCyan outline-none">
+                        <option value="10000">Startup / Equipo Pequeño (1 - 10 personas)</option>
+                        <option value="45000" selected>Empresa Mediana / Consultoría (11 - 50 personas)</option>
+                        <option value="150000">Corporación / Institución (50+ personas)</option>
+                    </select>
+                </div>
+
+                <!-- PREGUNTA 2 -->
+                <div>
+                    <label class="block text-slate-300 mb-2">2. Nivel de Rotación o Dependencia de Personal Clave:</label>
+                    <select id="turnover" class="w-full bg-cyberDark border border-slate-700 rounded-lg p-3 text-neonCyan focus:border-neonCyan outline-none">
+                        <option value="0.15">Baja (El conocimiento está documentado)</option>
+                        <option value="0.35" selected>Media (Muchos procesos están "en la cabeza" de la gente)</option>
+                        <option value="0.60">Alta (Si un talento renuncia, el área se paraliza)</option>
+                    </select>
+                </div>
+
+                <!-- BOTÓN DE CÁLCULO -->
+                <button onclick="calcularEureka()" class="w-full bg-gradient-to-r from-neonCyan to-sky-500 text-cyberDark font-bold py-4 rounded-lg hover:opacity-90 transition uppercase tracking-wider">
+                    ⚡ Procesar con Algoritmo del Búnker
+                </button>
+            </div>
+
+            <!-- RESULTADO DEL MOMENTO EUREKA (HIDDEN BY DEFAULT / SHOWN ON CLICK) -->
+            <div id="resultado" class="hidden mt-8 p-6 bg-cyberDark border border-neonRed/50 rounded-xl">
+                <div class="flex items-center gap-3 text-neonRed font-mono font-bold mb-3">
+                    <span class="animate-pulse">⚠️</span> ALERTA DE VOLATILIDAD COGNITIVA DETECTADA
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 text-center">
+                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
+                        <span class="block text-xs text-slate-400 font-mono">PÉRDIDA ESTIMADA ANUAL</span>
+                        <span id="loss-amount" class="text-2xl md:text-3xl font-black text-neonRed font-mono">$0 USD</span>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border border-slate-800">
+                        <span class="block text-xs text-slate-400 font-mono">ÍNDICE DE INMUNIDAD</span>
+                        <span id="immunity-score" class="text-2xl md:text-3xl font-black text-neonGold font-mono">0%</span>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed font-mono">
+                    <strong>DIAGNÓSTICO:</strong> Tu organización rehace trabajo ya resuelto y depende de conocimiento no estructurado. Requieres un **Búnker Cognitivo** para transformar la intuición en **IP Blindada**.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: CONVERSIÓN HIGH-TICKET -->
+    <section class="max-w-4xl mx-auto px-4 py-16 text-center border-t border-slate-800">
+        <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+            ¿Listo para construir la memoria inmune de tu empresa?
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+            Accede a la Suite completa de *Smart Blueprints* y agenda una sesión de Arquitectura Digital con SmartWorld AI.
+        </p>
+
+        <div class="bg-cyberCard border border-neonGold/40 rounded-2xl p-8 max-w-lg mx-auto glow-gold">
+            <span class="text-xs font-mono text-neonGold uppercase tracking-widest block mb-2">ACCESO COMPLETO A LA PLATAFORMA</span>
+            <div class="text-4xl font-black text-white mb-4">$29.00 <span class="text-sm font-normal text-slate-400">USD</span></div>
+            
+            <ul class="text-left text-xs text-slate-300 space-y-3 mb-8 font-mono">
+                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Licencia de Acceso a la Web Interactiva</li>
+                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Pista de Audio HD de "The Algorithm Summit"</li>
+                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Checklist de Inmunidad Cognitiva para CFOs</li>
+                <li class="flex items-center gap-2"><span class="text-neonCyan">✓</span> Pase de Agendamiento para Diagnóstico High-Ticket</li>
+            </ul>
+
+            <button class="w-full bg-neonGold text-cyberDark font-bold py-4 rounded-lg hover:bg-yellow-400 transition uppercase tracking-wider text-sm">
+                🚀 Obtener Acceso Inmediato
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900 py-8 text-center text-xs font-mono text-slate-600">
+        <p>SmartWorld AI © 2026 • Arquitectura Digital de Ecosistemas • Creado por Rubens Temoche</p>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT DEL SIMULADOR EUREKA -->
+    <script>
+        function calcularEureka() {
+            const size = parseFloat(document.getElementById('size').value);
+            const turnover = parseFloat(document.getElementById('turnover').value);
+            
+            const loss = size * turnover * 1.8;
+            const immunity = Math.max(12, Math.round(100 - (turnover * 100)));
+
+            document.getElementById('loss-amount').innerText = '$' + loss.toLocaleString('en-US') + ' USD';
+            document.getElementById('immunity-score').innerText = immunity + '%';
+            
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.classList.remove('hidden');
+            resultadoDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
